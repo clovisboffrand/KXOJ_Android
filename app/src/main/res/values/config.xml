@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="STREAM_URL">http://ice9.securenetsystems.net/BEAT</string>
+
+    <string name="website_url">http://bristolbeat.com/</string>
+
+    <string name="facebook_url">http://www.facebook.com/bristolbeat</string>
+    <string name="twitter_url">http://www.twitter.com/bristolsrockmix</string>
+    <string name="phone_number">860-261-7456</string>
+    <string name="email_address">studio@bristolbeat.com</string>
+    <string name="instagram_url">https://instagram.com/bristolbeatradio</string>
+    <string name="calendar_url">http://bristolbeat.com/event-directory/</string>
+    <string name="advertisers_url">http://www.bristolbeat.com/directory</string>
+    <string name="contests_url">http://bristolbeat.com/category/contests/</string>
+
+    <string name="sample_audio">http://www.bristolbeat.com/app/sample.mp3</string>
+    <string name="upload_audio">http://radioserversapps.com/bristolbeat/app/upload.php</string>
+    <string name="request_url">http://bristolbeat.com/app/shoutoutimage.png</string>
+
+    <string name="feed_url">https://streamdb7web.securenetsystems.net/player_status_update/BEAT_history_rss.xml</string>
+</resources>
