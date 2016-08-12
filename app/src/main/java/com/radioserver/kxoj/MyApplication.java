@@ -7,6 +7,7 @@ import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.radioserver.kxoj.helpers.AppSettings;
 
 public class MyApplication extends Application {
 
@@ -18,6 +19,9 @@ public class MyApplication extends Application {
     }
 
     private void initSingletons() {
+        // Initialize App Settings Instance.
+        AppSettings.init(this);
+
         // Instantiate image loader.
         DisplayImageOptions defaultOptions = new DisplayImageOptions
                 .Builder()
