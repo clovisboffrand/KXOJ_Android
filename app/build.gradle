@@ -6,7 +6,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.radioserver.bristolbeat"
+        applicationId "com.radioserver.kxoj"
         minSdkVersion 15
         targetSdkVersion 24
 
