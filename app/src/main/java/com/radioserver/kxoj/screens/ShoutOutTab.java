@@ -1,12 +1,4 @@
-/**
- * Project    : iRadio
- * Author     : Hoang San
- **/
 package com.radioserver.kxoj.screens;
-
-/**
- * @author Hoang San
- */
 
 import android.os.Bundle;
 

@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,17 +87,21 @@ public class ShoutOutScreen extends CustomScreen implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.btnListen) {
+        if (v.getId() == btnListen.getId()) {
             startListen();
-        } else if (v.getId() == R.id.btnRecord) {
-            int isChecked = Integer.parseInt(v.getTag().toString());
+        } else if (v.getId() == btnRecord.getId()) {
+            int isChecked = Integer.parseInt(btnRecord.getTag().toString());
             if (isChecked == 0) {
-                v.setTag(1);
-                v.setBackgroundResource(R.drawable.ic_btn_stop_record);
+                btnRecord.setTag(1);
+                btnRecord.setBackgroundResource(R.drawable.bg_button_selected);
+                btnRecord.setText(R.string.Stop_Recording);
+                btnRecord.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.white));
                 startRecord();
             } else {
-                v.setTag(0);
-                v.setBackgroundResource(R.drawable.ic_btn_record);
+                btnRecord.setTag(0);
+                btnRecord.setBackgroundResource(R.drawable.bg_button_normal);
+                btnRecord.setText(R.string.Record_Your_Voice);
+                btnRecord.setTextColor(ContextCompat.getColor(getActivity(), R.color.global_tint_color));
                 stopRecord();
             }
         } else if (v.getId() == R.id.btnPlay) {

@@ -23,8 +23,13 @@
 
     <!-- String Resource for Shout Out Page -->
     <string name="shout_out">Shout Out</string>
-    <string name="Thanks_for_sharing">Thanks for sharing! Listen to Bristol Beat and
-        you might hear yourself on the radio!</string>
+    <string name="Listen_To_An_Example">Listen To An Example</string>
+    <string name="Record_Your_Voice">Record Your Voice</string>
+    <string name="Stop_Recording">Stop Recording</string>
+    <string name="Preview_Your_Recording">Preview Your Recording</string>
+    <string name="Send_It_In">Send It In !</string>
+    <string name="Thanks_for_sharing">Thanks for sharing! Listen to KXOJ
+        and you might hear yourself on the radio!</string>
 
     <!-- String Resource for Recent Playlist Page -->
     <string name="Recent_Playlist">Recent Playlist</string>
