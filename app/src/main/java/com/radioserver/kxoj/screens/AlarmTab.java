@@ -1,12 +1,12 @@
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
 import org.san.iphonestyle.CustomTab;
 
 import android.os.Bundle;
 
-import com.radioserver.bristolbeat.R;
+import com.radioserver.kxoj.R;
 
-public class RadioTab extends CustomTab {
+public class AlarmTab extends CustomTab {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,8 @@ public class RadioTab extends CustomTab {
 
     @Override
     protected void setRootScreen() {
-        RadioScreen screen = new RadioScreen();
+        AlarmScreen screen = new AlarmScreen();
         this.setScreen(getSupportFragmentManager(), screen);
     }
+
 }

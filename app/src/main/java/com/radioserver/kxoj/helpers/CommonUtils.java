@@ -1,4 +1,4 @@
-package com.radioserver.bristolbeat.helpers;
+package com.radioserver.kxoj.helpers;
 
 import android.util.Patterns;
 import android.widget.ImageView;

@@ -1,12 +1,12 @@
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
 import org.san.iphonestyle.CustomScreen;
 
-import com.radioserver.bristolbeat.R;
-import com.radioserver.bristolbeat.helpers.CommonUtils;
-import com.radioserver.bristolbeat.models.RadioSong;
-import com.radioserver.bristolbeat.services.RadioPlayerService;
-import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
+import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.CommonUtils;
+import com.radioserver.kxoj.models.RadioSong;
+import com.radioserver.kxoj.services.RadioPlayerService;
+import com.radioserver.kxoj.helpers.SharedAlgorithm;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.radioserver.bristolbeat">
+    package="com.radioserver.kxoj">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -16,13 +16,13 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.radioserver.kxoj.MyApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".screens.SplashActivity"
+            android:name="com.radioserver.kxoj.screens.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar">
@@ -34,44 +34,44 @@
         </activity>
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.Main"
+            android:name="com.radioserver.kxoj.screens.Main"
             android:clearTaskOnLaunch="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.RadioTab"
+            android:name="com.radioserver.kxoj.screens.RadioTab"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.WebTab"
+            android:name="com.radioserver.kxoj.screens.WebTab"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.AlarmTab"
+            android:name="com.radioserver.kxoj.screens.AlarmTab"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.SocialTab"
+            android:name="com.radioserver.kxoj.screens.SocialTab"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.ShoutOutTab"
+            android:name="com.radioserver.kxoj.screens.ShoutOutTab"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
         <activity
-            android:name="com.radioserver.bristolbeat.screens.RecentPlaylistActivity"
+            android:name="com.radioserver.kxoj.screens.RecentPlaylistActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MaterialAppTheme" />
 
-        <receiver android:name="com.radioserver.bristolbeat.services.AlarmGoOffReceiver" />
+        <receiver android:name="com.radioserver.kxoj.services.AlarmGoOffReceiver" />
 
-        <service android:name="com.radioserver.bristolbeat.services.NotificationService" />
+        <service android:name="com.radioserver.kxoj.services.NotificationService" />
     </application>
 </manifest>

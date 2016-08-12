@@ -1,7 +1,7 @@
-package com.radioserver.bristolbeat.services;
+package com.radioserver.kxoj.services;
 
-import com.radioserver.bristolbeat.helpers.AlarmHelper;
-import com.radioserver.bristolbeat.screens.Main;
+import com.radioserver.kxoj.helpers.AlarmHelper;
+import com.radioserver.kxoj.screens.Main;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

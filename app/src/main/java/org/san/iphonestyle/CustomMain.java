@@ -1,6 +1,6 @@
 package org.san.iphonestyle;
 
-import com.radioserver.bristolbeat.R;
+import com.radioserver.kxoj.R;
 
 import android.os.Bundle;
 import android.app.TabActivity;

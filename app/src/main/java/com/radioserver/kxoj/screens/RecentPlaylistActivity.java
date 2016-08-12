@@ -1,4 +1,4 @@
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -15,11 +15,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.radioserver.bristolbeat.R;
-import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
-import com.radioserver.bristolbeat.models.RadioSong;
-import com.radioserver.bristolbeat.services.RadioPlayerService;
-import com.radioserver.bristolbeat.helpers.CommonUtils;
+import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.SharedAlgorithm;
+import com.radioserver.kxoj.models.RadioSong;
+import com.radioserver.kxoj.services.RadioPlayerService;
+import com.radioserver.kxoj.helpers.CommonUtils;
 
 import java.util.List;
 

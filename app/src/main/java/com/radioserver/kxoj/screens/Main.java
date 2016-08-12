@@ -1,9 +1,9 @@
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
 import org.san.iphonestyle.CustomMain;
 
-import com.radioserver.bristolbeat.R;
-import com.radioserver.bristolbeat.services.RadioPlayerService;
+import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.services.RadioPlayerService;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;

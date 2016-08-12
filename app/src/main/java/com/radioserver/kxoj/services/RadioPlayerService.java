@@ -1,4 +1,4 @@
-package com.radioserver.bristolbeat.services;
+package com.radioserver.kxoj.services;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -11,9 +11,9 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.radioserver.bristolbeat.R;
-import com.radioserver.bristolbeat.models.RadioSong;
-import com.radioserver.bristolbeat.screens.Main;
+import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.models.RadioSong;
+import com.radioserver.kxoj.screens.Main;
 import com.spoledge.aacdecoder.MultiPlayer;
 import com.spoledge.aacdecoder.PlayerCallback;
 

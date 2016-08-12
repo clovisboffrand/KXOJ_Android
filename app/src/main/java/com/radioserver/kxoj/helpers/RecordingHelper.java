@@ -2,7 +2,7 @@
  * Project    : iRadio
  * Author     : Hoang San
  **/
-package com.radioserver.bristolbeat.helpers;
+package com.radioserver.kxoj.helpers;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;

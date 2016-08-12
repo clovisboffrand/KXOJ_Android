@@ -1,6 +1,6 @@
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
-import com.radioserver.bristolbeat.R;
+import com.radioserver.kxoj.R;
 
 import android.app.Activity;
 import android.content.Intent;

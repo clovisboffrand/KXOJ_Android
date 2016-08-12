@@ -1,6 +1,6 @@
-package com.radioserver.bristolbeat.helpers;
+package com.radioserver.kxoj.helpers;
 
-import com.radioserver.bristolbeat.services.AlarmGoOffReceiver;
+import com.radioserver.kxoj.services.AlarmGoOffReceiver;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

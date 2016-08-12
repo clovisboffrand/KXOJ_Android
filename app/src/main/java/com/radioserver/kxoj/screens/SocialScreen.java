@@ -1,4 +1,4 @@
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 
-import com.radioserver.bristolbeat.R;
-import com.radioserver.bristolbeat.helpers.SharedAlgorithm;
+import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.SharedAlgorithm;
 
 import org.san.iphonestyle.CustomScreen;
 

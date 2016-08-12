@@ -1,4 +1,4 @@
-package com.radioserver.bristolbeat.models;
+package com.radioserver.kxoj.models;
 
 public class RadioSong {
     private String mTitle;

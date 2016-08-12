@@ -2,7 +2,7 @@
  * Project    : iRadio
  * Author     : Hoang San
  **/
-package com.radioserver.bristolbeat.screens;
+package com.radioserver.kxoj.screens;
 
 /**
  * @author Hoang San
@@ -10,7 +10,7 @@ package com.radioserver.bristolbeat.screens;
 
 import android.os.Bundle;
 
-import com.radioserver.bristolbeat.R;
+import com.radioserver.kxoj.R;
 
 import org.san.iphonestyle.CustomTab;
 

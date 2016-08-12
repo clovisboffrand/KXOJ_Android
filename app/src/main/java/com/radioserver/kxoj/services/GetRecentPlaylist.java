@@ -1,10 +1,10 @@
-package com.radioserver.bristolbeat.services;
+package com.radioserver.kxoj.services;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
-import com.radioserver.bristolbeat.models.RadioSong;
+import com.radioserver.kxoj.models.RadioSong;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
