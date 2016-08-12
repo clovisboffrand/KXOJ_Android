@@ -2,15 +2,6 @@
 <resources>
     <string name="STREAM_URL">http://ice9.securenetsystems.net/BEAT</string>
 
-    <string name="facebook_url">http://www.facebook.com/bristolbeat</string>
-    <string name="twitter_url">http://www.twitter.com/bristolsrockmix</string>
-    <string name="phone_number">860-261-7456</string>
-    <string name="email_address">studio@bristolbeat.com</string>
-    <string name="instagram_url">https://instagram.com/bristolbeatradio</string>
-    <string name="calendar_url">http://bristolbeat.com/event-directory/</string>
-    <string name="advertisers_url">http://www.bristolbeat.com/directory</string>
-    <string name="contests_url">http://bristolbeat.com/category/contests/</string>
-
     <string name="sample_audio">https://s3.amazonaws.com/radioservers/apps/KXOJ/sample.mp3</string>
     <string name="upload_audio">http://kxojlisteners.com/app/upload.php</string>
 
@@ -22,9 +13,29 @@
         stationCallSign=KXOJ&amp;authTokenWeb=6A13521C-3D74-4CED-8909-631217C8FF21&amp;rss=true</string>
     <string name="events_link1">http://kxoj.com/category/events/</string>
 
+    <string name="facebook_link1">http://www.facebook.com/kxojtulsa</string>
+    <string name="twitter_link1">http://twitter.com/kxoj</string>
+    <string name="instagram_link1">http://instagram.com/kxoj2</string>
+    <string name="youtube_link1">http://www.youtube.com/kxoj</string>
+    <string name="website_link1">http://www.kxoj.com</string>
+    <string name="phone_number1">918-460-5965</string>
+    <string name="email_address1">onair@kxoj.com</string>
+    <string name="sms_number1">918-460-5965</string>
+    <string name="vine_link1">https://vine.co/u/1230442394806587392</string>
+
     <!-- KXOJ2 Channel -->
     <string name="stream_link2">http://ice41.securenetsystems.net/KXOJ2</string>
     <string name="feed_link2">https://radio.securenetsystems.net/dx/get_playlist_history.cfm?
         stationCallSign=KXOJ2&amp;authTokenWeb=2F1427A7-602F-419D-94F3-0AC3C8064583&amp;rss=true</string>
     <string name="events_link2">http://kxoj2.com/events/category/concerts/</string>
+
+    <string name="facebook_link2">http://facebook.com/kxoj2</string>
+    <string name="twitter_link2">http://twitter.com/kxoj2</string>
+    <string name="instagram_link2">http://instagram.com/kxoj2</string>
+    <string name="youtube_link2">http://www.youtube.com/kxoj</string>
+    <string name="website_link2">http://kxoj2.com</string>
+    <string name="phone_number2">918-460-5965</string>
+    <string name="email_address2">studio@kxoj2.com</string>
+    <string name="sms_number2">918-928-5965</string>
+    <string name="vine_link2">https://vine.co/u/1230442394806587392</string>
 </resources>
