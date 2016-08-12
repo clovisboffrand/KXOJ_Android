@@ -4,7 +4,6 @@ import org.san.iphonestyle.CustomMain;
 
 import com.radioserver.bristolbeat.R;
 import com.radioserver.bristolbeat.services.RadioPlayerService;
-import com.radioserver.bristolbeat.helpers.UserProfileSingleton;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -66,7 +65,6 @@ public class Main extends CustomMain {
     protected void onNewIntent(Intent intent) {
         if (intent.getLongExtra("MILI", 0) != 0) {
             this.getTabHost().setCurrentTab(0);
-            UserProfileSingleton.getConfig(getApplicationContext()).setPlay(true);
         }
         super.onNewIntent(intent);
     }

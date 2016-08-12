@@ -1,27 +1,17 @@
-/**
- * Project    : iRadio
- * Author     : Hoang San
- **/
 package com.radioserver.bristolbeat.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 public class UserProfileSingleton {
-
     public static final int TIMEOUT = 30000;
 
-    private boolean isPlay;
-    // Preferences
     public static String PREFERENCES = "LeadsappConfig";
 
     private SharedPreferences mSettings;
     private SharedPreferences.Editor mEditor;
 
     private static UserProfileSingleton mInstance = null;
-
-    //
-    private static final String SPLASHSCREEN = "SPLASHSCREEN";
 
     private static final String AUTOMATIC = "AUTOMATIC";
     private static final String HOUR = "HOUR";
@@ -37,8 +27,6 @@ public class UserProfileSingleton {
     private UserProfileSingleton(Context context) {
         mSettings = context.getSharedPreferences(PREFERENCES, 0);
         mEditor = mSettings.edit();
-
-        isPlay = false;
     }
 
     public boolean isAutomatic() {
@@ -65,23 +53,6 @@ public class UserProfileSingleton {
 
     public void setMin(int value) {
         mEditor.putInt(MIN, value);
-        mEditor.commit();
-    }
-
-    public boolean isPlay() {
-        return isPlay;
-    }
-
-    public void setPlay(boolean isPlay) {
-        this.isPlay = isPlay;
-    }
-
-    public boolean isShowSplashScreen() {
-        return mSettings.getBoolean(SPLASHSCREEN, false);
-    }
-
-    public void setShowSplashScreen(boolean value) {
-        mEditor.putBoolean(SPLASHSCREEN, value);
         mEditor.commit();
     }
 }

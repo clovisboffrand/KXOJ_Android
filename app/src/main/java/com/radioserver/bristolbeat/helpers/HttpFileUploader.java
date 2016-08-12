@@ -1,10 +1,3 @@
-/**
- * HTTP File Uploader
- * <p>
- * Created by Vo Hoang San - hoangsan.762@gmail.com
- * Copyright (c) 2011 San Vo. All rights reserved.
- */
-
 package com.radioserver.bristolbeat.helpers;
 
 import android.util.Log;
@@ -132,7 +125,6 @@ public class HttpFileUploader {
         }
     }
 
-    //-----------------
     public class Data {
         private String mName;
         private Object mValue;
