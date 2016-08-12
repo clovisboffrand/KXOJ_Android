@@ -6,7 +6,7 @@
     <string name="alert_loading">Please wait...</string>
 
     <!-- String Resources for Web Screen -->
-    <string name="Website">Website</string>
+    <string name="Concerts">Concerts</string>
 
     <!-- String Resources for Alarm Screen -->
     <string name="alarm_screen_title">Wake Up to Bristol Beat</string>

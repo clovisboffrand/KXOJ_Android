@@ -3,6 +3,7 @@ package com.radioserver.kxoj.screens;
 import android.os.Bundle;
 
 import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.AppSettings;
 
 import org.san.iphonestyle.CustomTab;
 
@@ -23,8 +24,7 @@ public class WebTab extends CustomTab {
     protected void setRootScreen() {
         WebScreen webScreen = new WebScreen();
         Bundle bundle = new Bundle();
-        String url = getResources().getString(R.string.website_url);
-        bundle.putString("URL", url);
+        bundle.putString("URL", AppSettings.shared().eventsLink);
         webScreen.setArguments(bundle);
         this.setScreen(getSupportFragmentManager(), webScreen);
     }

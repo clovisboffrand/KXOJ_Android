@@ -2,8 +2,6 @@
 <resources>
     <string name="STREAM_URL">http://ice9.securenetsystems.net/BEAT</string>
 
-    <string name="website_url">http://bristolbeat.com/</string>
-
     <string name="facebook_url">http://www.facebook.com/bristolbeat</string>
     <string name="twitter_url">http://www.twitter.com/bristolsrockmix</string>
     <string name="phone_number">860-261-7456</string>
