@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TabWidget;
 import android.widget.TextView;
 
 /**
@@ -41,13 +42,14 @@ public abstract class CustomMain extends TabActivity {
         TabHost.TabSpec spec = tabHost.newTabSpec("tab" + label);
         View tabIndicator;
 
-        tabIndicator = LayoutInflater.from(this)
-                .inflate(R.layout.layout_tabbar_indicator, getTabWidget(), false);
+        tabIndicator = LayoutInflater.from(this).inflate(R.layout.layout_tabbar_indicator, getTabWidget(), false);
         ImageView tabIcon = (ImageView) tabIndicator.findViewById(R.id.icon);
         tabIcon.setImageResource(drawableId);
-        ((TextView) tabIndicator.findViewById(R.id.title)).setText(label);
 
         spec.setIndicator(tabIndicator);
+
+        TabWidget widget = tabHost.getTabWidget();
+        widget.setStripEnabled(false);
 
         spec.setContent(intent);
         tabHost.addTab(spec);
