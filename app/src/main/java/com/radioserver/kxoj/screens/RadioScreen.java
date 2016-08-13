@@ -38,6 +38,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActivity().registerReceiver(mVolumeChangeReceiver, new IntentFilter(ACTION_VOLUME_CHANGE));
+        getActivity().registerReceiver(mReceiver, makeIntentFilter());
     }
 
     @Override
@@ -50,15 +51,6 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        RadioPlayerService.getInstance().executeGetRecentSongs();
-        getActivity().registerReceiver(mReceiver, makeIntentFilter());
-        setupSongInfo();
-    }
-
     private IntentFilter makeIntentFilter() {
         IntentFilter iFilter = new IntentFilter();
         iFilter.addAction(RadioPlayerService.ACTION_PLAYER_STATE_CHANGE);
@@ -68,14 +60,15 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
-        getActivity().unregisterReceiver(mReceiver);
+    public void onResume() {
+        super.onResume();
+        RadioPlayerService.getInstance().executeGetRecentSongs();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        getActivity().unregisterReceiver(mReceiver);
         getActivity().unregisterReceiver(mVolumeChangeReceiver);
     }
 
@@ -154,8 +147,8 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
             if (RadioPlayerService.ACTION_NEW_STREAM.equalsIgnoreCase(intent.getAction())) {
                 ivStationLogo.setImageResource(AppSettings.shared().logo);
                 ivAlbumCover.setImageResource(AppSettings.shared().defaultAlbum);
-                tvAlbumTitle.setText(null);
-                tvAlbumArtist.setText(null);
+                tvAlbumTitle.setText("");
+                tvAlbumArtist.setText("");
             }
         }
     };
