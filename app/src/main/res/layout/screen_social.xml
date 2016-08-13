@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_facebook" />
+            android:src="@drawable/btn_facebook" />
 
         <ImageView
             android:id="@+id/btnTwitter"
@@ -40,7 +40,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_twitter" />
+            android:src="@drawable/btn_twitter" />
 
         <ImageView
             android:id="@+id/btnInstagram"
@@ -48,7 +48,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_instagram" />
+            android:src="@drawable/btn_instagram" />
 
         <ImageView
             android:id="@+id/btnYoutube"
@@ -56,7 +56,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_youtube" />
+            android:src="@drawable/btn_youtube" />
 
         <ImageView
             android:id="@+id/btnWebsite"
@@ -64,7 +64,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_website" />
+            android:src="@drawable/btn_website" />
 
         <ImageView
             android:id="@+id/btnPhone"
@@ -72,7 +72,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_phone" />
+            android:src="@drawable/btn_phone" />
 
         <ImageView
             android:id="@+id/btnEmail"
@@ -80,7 +80,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_email" />
+            android:src="@drawable/btn_email" />
 
         <ImageView
             android:id="@+id/btnMessage"
@@ -88,7 +88,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_message" />
+            android:src="@drawable/btn_message" />
 
         <ImageView
             android:id="@+id/btnVine"
@@ -96,6 +96,6 @@
             android:layout_height="0dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
-            android:background="@drawable/btn_vine" />
+            android:src="@drawable/btn_vine" />
     </LinearLayout>
 </LinearLayout>
