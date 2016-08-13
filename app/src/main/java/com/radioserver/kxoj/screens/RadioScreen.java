@@ -113,6 +113,9 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
             case R.id.btnPlay:
                 getActivity().sendBroadcast(new Intent(RadioPlayerService.ACTION_PLAY));
                 break;
+            case R.id.btnStations:
+                startActivity(new Intent(getActivity(), StationsActivity.class));
+                break;
             case R.id.btnRecentPlaylist:
                 startActivity(new Intent(getActivity(), RecentPlaylistActivity.class));
                 break;

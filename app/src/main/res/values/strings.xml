@@ -31,6 +31,10 @@
     <string name="Thanks_for_sharing">Thanks for sharing! Listen to KXOJ
         and you might hear yourself on the radio!</string>
 
+    <!-- Strings for Stations Page -->
+    <string name="Play">Play</string>
+    <string name="Playing">Playing</string>
+
     <!-- String Resource for Recent Playlist Page -->
     <string name="Recent_Playlist">Recent Playlist</string>
 </resources>
