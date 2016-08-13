@@ -103,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="20dp"
                     android:layout_marginRight="20dp"
-                    android:src="@drawable/btn_play" />
+                    android:src="@drawable/btn_stop" />
 
                 <ImageView
                     android:layout_width="wrap_content"

@@ -141,9 +141,9 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
             }
             if (RadioPlayerService.ACTION_PLAYER_STATE_CHANGE.equalsIgnoreCase(intent.getAction())) {
                 if (RadioPlayerService.getInstance().isPlaying()) {
-                    btnPlay.setBackgroundResource(R.drawable.btn_stop);
+                    btnPlay.setImageResource(R.drawable.btn_stop);
                 } else {
-                    btnPlay.setBackgroundResource(R.drawable.btn_play);
+                    btnPlay.setImageResource(R.drawable.btn_play);
                 }
             }
         }
