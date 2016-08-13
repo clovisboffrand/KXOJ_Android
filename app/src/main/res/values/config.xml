@@ -5,12 +5,9 @@
     <string name="sample_audio">https://s3.amazonaws.com/radioservers/apps/KXOJ/sample.mp3</string>
     <string name="upload_audio">http://kxojlisteners.com/app/upload.php</string>
 
-    <string name="feed_url">https://streamdb7web.securenetsystems.net/player_status_update/BEAT_history_rss.xml</string>
-
     <!-- KXOJ Channel -->
     <string name="stream_link1">http://ice7.securenetsystems.net/KXOJ</string>
-    <string name="feed_link1">https://radio.securenetsystems.net/dx/get_playlist_history.cfm?
-        stationCallSign=KXOJ&amp;authTokenWeb=6A13521C-3D74-4CED-8909-631217C8FF21&amp;rss=true</string>
+    <string name="feed_link1">https://radio.securenetsystems.net/dx/get_playlist_history.cfm?stationCallSign=KXOJ&amp;authTokenWeb=6A13521C-3D74-4CED-8909-631217C8FF21&amp;rss=true</string>
     <string name="events_link1">http://kxoj.com/category/events/</string>
 
     <string name="facebook_link1">http://www.facebook.com/kxojtulsa</string>
@@ -25,8 +22,7 @@
 
     <!-- KXOJ2 Channel -->
     <string name="stream_link2">http://ice41.securenetsystems.net/KXOJ2</string>
-    <string name="feed_link2">https://radio.securenetsystems.net/dx/get_playlist_history.cfm?
-        stationCallSign=KXOJ2&amp;authTokenWeb=2F1427A7-602F-419D-94F3-0AC3C8064583&amp;rss=true</string>
+    <string name="feed_link2">https://radio.securenetsystems.net/dx/get_playlist_history.cfm?stationCallSign=KXOJ2&amp;authTokenWeb=2F1427A7-602F-419D-94F3-0AC3C8064583&amp;rss=true</string>
     <string name="events_link2">http://kxoj2.com/events/category/concerts/</string>
 
     <string name="facebook_link2">http://facebook.com/kxoj2</string>

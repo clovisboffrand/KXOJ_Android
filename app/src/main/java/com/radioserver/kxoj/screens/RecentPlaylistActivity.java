@@ -16,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.AppSettings;
 import com.radioserver.kxoj.helpers.SharedAlgorithm;
 import com.radioserver.kxoj.models.RadioSong;
 import com.radioserver.kxoj.services.RadioPlayerService;
@@ -111,11 +112,9 @@ public class RecentPlaylistActivity extends Activity {
             ((TextView) convertView.findViewById(R.id.song_description)).setText(item.getDescription());
             ImageView thumbnail = (ImageView) convertView.findViewById(R.id.song_thumbnail);
             String url = item.getThumbnailUrl();
-            int logoId = R.drawable.img_logo;
+            thumbnail.setImageResource(AppSettings.shared().logo);
             if (url != null && url.contains("http")) {
-                CommonUtils.loadImage(thumbnail, url, logoId);
-            } else {
-                thumbnail.setImageResource(logoId);
+                CommonUtils.loadImage(thumbnail, url, AppSettings.shared().logo);
             }
             return convertView;
         }

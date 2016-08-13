@@ -12,6 +12,7 @@ import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.AppSettings;
 import com.radioserver.kxoj.models.RadioSong;
 import com.radioserver.kxoj.screens.Main;
 import com.spoledge.aacdecoder.MultiPlayer;
@@ -270,8 +271,8 @@ public class RadioPlayerService {
         long timeUpdateInteval = System.currentTimeMillis() - mLastTimeUpdate;
         if (!mIsGetRecentPlayList && timeUpdateInteval > TIME_TO_UPDATE_FROM_UI) {
             mLastTimeUpdate = System.currentTimeMillis();
-            String api = mContext.getString(R.string.feed_url);
-            mGetRecentPlaylistTask = new GetRecentPlaylist(mContext, api);
+            Log.e("RecentPlaylistTask", AppSettings.shared().feedLink);
+            mGetRecentPlaylistTask = new GetRecentPlaylist(mContext, AppSettings.shared().feedLink);
             mGetRecentPlaylistTask.execute();
             mIsGetRecentPlayList = true;
         }

@@ -3,6 +3,7 @@ package com.radioserver.kxoj.screens;
 import org.san.iphonestyle.CustomScreen;
 
 import com.radioserver.kxoj.R;
+import com.radioserver.kxoj.helpers.AppSettings;
 import com.radioserver.kxoj.helpers.CommonUtils;
 import com.radioserver.kxoj.models.RadioSong;
 import com.radioserver.kxoj.services.RadioPlayerService;
@@ -19,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -27,9 +27,9 @@ import android.widget.TextView;
 
 public class RadioScreen extends CustomScreen implements OnClickListener, OnSeekBarChangeListener {
 
-    Button btnPlay, btnStop;
-    ImageView btnRecent, ivSongLogo;
-    TextView tvTitle, tvArtist;
+    ImageView btnStations, btnRecentPlaylist, btnPlay;
+    ImageView ivAlbumCover;
+    TextView tvAlbumTitle, tvAlbumArtist;
     private SeekBar skbVolume;
 
     public static final String ACTION_VOLUME_CHANGE = "android.media.VOLUME_CHANGED_ACTION";
@@ -46,12 +46,8 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
 
         this.initComponents(view);
         this.setListeners();
-        return view;
-    }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+        return view;
     }
 
     @Override
@@ -83,23 +79,17 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-    }
-
-    @Override
     protected void initData() {
     }
 
     @Override
     protected void initComponents(View container) {
-
-        btnPlay = (Button) container.findViewById(R.id.btnPlay);
-        btnStop = (Button) container.findViewById(R.id.btnStop);
-        btnRecent = (ImageView) container.findViewById(R.id.btn_recent_playlist);
-        ivSongLogo = (ImageView) container.findViewById(R.id.iv_song_logo);
-        tvTitle = (TextView) container.findViewById(R.id.tv_title);
-        tvArtist = (TextView) container.findViewById(R.id.tv_artist);
+        btnStations = (ImageView) container.findViewById(R.id.btnStations);
+        btnRecentPlaylist = (ImageView) container.findViewById(R.id.btnRecentPlaylist);
+        btnPlay = (ImageView) container.findViewById(R.id.btnPlay);
+        ivAlbumCover = (ImageView) container.findViewById(R.id.ivAlbumCover);
+        tvAlbumTitle = (TextView) container.findViewById(R.id.tvAlbumTitle);
+        tvAlbumArtist = (TextView) container.findViewById(R.id.tvAlbumArtist);
         skbVolume = (SeekBar) container.findViewById(R.id.skbVolume);
 
         AudioManager audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -111,9 +101,9 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
 
     @Override
     protected void setListeners() {
+        btnStations.setOnClickListener(this);
+        btnRecentPlaylist.setOnClickListener(this);
         btnPlay.setOnClickListener(this);
-        btnStop.setOnClickListener(this);
-        btnRecent.setOnClickListener(this);
         skbVolume.setOnSeekBarChangeListener(this);
     }
 
@@ -123,11 +113,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
             case R.id.btnPlay:
                 getActivity().sendBroadcast(new Intent(RadioPlayerService.ACTION_PLAY));
                 break;
-            case R.id.btnStop:
-                getActivity().sendBroadcast(new Intent(RadioPlayerService.ACTION_STOP));
-                btnPlay.setBackgroundResource(R.mipmap.ic_btn_play);
-                break;
-            case R.id.btn_recent_playlist:
+            case R.id.btnRecentPlaylist:
                 startActivity(new Intent(getActivity(), RecentPlaylistActivity.class));
                 break;
         }
@@ -155,9 +141,9 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
             }
             if (RadioPlayerService.ACTION_PLAYER_STATE_CHANGE.equalsIgnoreCase(intent.getAction())) {
                 if (RadioPlayerService.getInstance().isPlaying()) {
-                    btnPlay.setBackgroundResource(R.mipmap.ic_btn_pause);
+                    btnPlay.setBackgroundResource(R.drawable.btn_stop);
                 } else {
-                    btnPlay.setBackgroundResource(R.mipmap.ic_btn_play);
+                    btnPlay.setBackgroundResource(R.drawable.btn_play);
                 }
             }
         }
@@ -180,9 +166,9 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
     private void setupSongInfo() {
         RadioSong currentSong = RadioPlayerService.getInstance().getCurrentSong();
         if (currentSong != null) {
-            tvTitle.setText(currentSong.getTitle());
-            tvArtist.setText(currentSong.getDescription());
-            CommonUtils.loadImage(ivSongLogo, currentSong.getThumbnailUrl(), R.drawable.img_logo_full);
+            tvAlbumTitle.setText(currentSong.getTitle());
+            tvAlbumArtist.setText(currentSong.getDescription());
+            CommonUtils.loadImage(ivAlbumCover, currentSong.getThumbnailUrl(), AppSettings.shared().defaultAlbum);
         }
     }
 }
