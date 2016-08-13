@@ -32,6 +32,7 @@
         and you might hear yourself on the radio!</string>
 
     <!-- Strings for Stations Page -->
+    <string name="Stations">Stations</string>
     <string name="Play">Play</string>
     <string name="Playing">Playing</string>
 

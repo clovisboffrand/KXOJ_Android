@@ -28,7 +28,7 @@ import android.widget.TextView;
 public class RadioScreen extends CustomScreen implements OnClickListener, OnSeekBarChangeListener {
 
     ImageView btnStations, btnRecentPlaylist, btnPlay;
-    ImageView ivAlbumCover;
+    ImageView ivStationLogo, ivAlbumCover;
     TextView tvAlbumTitle, tvAlbumArtist;
     private SeekBar skbVolume;
 
@@ -63,6 +63,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
         IntentFilter iFilter = new IntentFilter();
         iFilter.addAction(RadioPlayerService.ACTION_PLAYER_STATE_CHANGE);
         iFilter.addAction(RadioPlayerService.ACTION_SONG_LIST_READY);
+        iFilter.addAction(RadioPlayerService.ACTION_NEW_STREAM);
         return iFilter;
     }
 
@@ -87,6 +88,7 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
         btnStations = (ImageView) container.findViewById(R.id.btnStations);
         btnRecentPlaylist = (ImageView) container.findViewById(R.id.btnRecentPlaylist);
         btnPlay = (ImageView) container.findViewById(R.id.btnPlay);
+        ivStationLogo = (ImageView) container.findViewById(R.id.ivStationLogo);
         ivAlbumCover = (ImageView) container.findViewById(R.id.ivAlbumCover);
         tvAlbumTitle = (TextView) container.findViewById(R.id.tvAlbumTitle);
         tvAlbumArtist = (TextView) container.findViewById(R.id.tvAlbumArtist);
@@ -148,6 +150,12 @@ public class RadioScreen extends CustomScreen implements OnClickListener, OnSeek
                 } else {
                     btnPlay.setImageResource(R.drawable.btn_play);
                 }
+            }
+            if (RadioPlayerService.ACTION_NEW_STREAM.equalsIgnoreCase(intent.getAction())) {
+                ivStationLogo.setImageResource(AppSettings.shared().logo);
+                ivAlbumCover.setImageResource(AppSettings.shared().defaultAlbum);
+                tvAlbumTitle.setText(null);
+                tvAlbumArtist.setText(null);
             }
         }
     };

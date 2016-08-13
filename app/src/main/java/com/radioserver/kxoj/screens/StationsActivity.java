@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.radioserver.kxoj.R;
 import com.radioserver.kxoj.helpers.AppSettings;
+import com.radioserver.kxoj.services.RadioPlayerService;
 
 public class StationsActivity extends Activity implements View.OnClickListener {
 
@@ -35,6 +36,7 @@ public class StationsActivity extends Activity implements View.OnClickListener {
         } else if (view.getId() == btnChannel2.getId()) {
             AppSettings.shared().loadSecondChannel();
         }
+        RadioPlayerService.getInstance().reloadStream();
         finish();
     }
 

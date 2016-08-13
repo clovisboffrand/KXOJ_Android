@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="STREAM_URL">http://ice9.securenetsystems.net/BEAT</string>
-
     <string name="sample_audio">https://s3.amazonaws.com/radioservers/apps/KXOJ/sample.mp3</string>
     <string name="upload_audio">http://kxojlisteners.com/app/upload.php</string>
 

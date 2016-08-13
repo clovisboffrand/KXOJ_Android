@@ -21,16 +21,14 @@ import com.spoledge.aacdecoder.PlayerCallback;
 import java.util.List;
 
 public class RadioPlayerService {
-
-    private static final String LOG_TAG = "RadioPlayerService";
     public static final String ACTION_PLAYER_STATE_CHANGE = "com.radioserver.bristolbeat.RadioPlayerService.PLAYER_STATE_CHANGE";
     public static final String ACTION_SONG_LIST_READY = "com.radioserver.bristolbeat.RadioPlayerService.SONG_LIST_READY";
+    public static final String ACTION_NEW_STREAM = "ACTION_NEW_STREAM";
     public static final String ACTION_PLAY = "com.radioserver.bristolbeat.RadioPlayerService.ACTION_PLAY";
     public static final String ACTION_STOP = "com.radioserver.bristolbeat.RadioPlayerService.ACTION_STOP";
 
     private Context mContext;
     private MultiPlayer mPlayer;
-    private String mRadioLink;
     private boolean mIsPlaying = false;
     private boolean mIsPlayNewStream = false;
 
@@ -156,7 +154,6 @@ public class RadioPlayerService {
         mContext = context.getApplicationContext();
 
         mPlayer = new MultiPlayer(mPlayerCallback);
-        mRadioLink = mContext.getString(R.string.STREAM_URL);
 
         mHandler = new Handler();
         mContext.registerReceiver(mReceiver, makeIntentFilter());
@@ -179,13 +176,11 @@ public class RadioPlayerService {
     }
 
     public void play() {
-        Log.d(LOG_TAG, "Play stream: " + mRadioLink);
         if (!mIsPlaying) {
-            Log.d(LOG_TAG, "Start play");
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    mPlayer.playAsync(mRadioLink);
+                    mPlayer.playAsync(AppSettings.shared().streamLink);
                 }
             }).start();
         }
@@ -193,6 +188,13 @@ public class RadioPlayerService {
 
     public void stop() {
         mPlayer.stop();
+    }
+
+    public void reloadStream() {
+        stop();
+        play();
+        executeGetRecentSongs();
+        mContext.sendBroadcast(new Intent(ACTION_NEW_STREAM));
     }
 
     public void destroy() {
