@@ -1,6 +1,9 @@
 package com.radioserver.kxoj.screens;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +16,7 @@ import android.widget.ImageView;
 import com.radioserver.kxoj.R;
 import com.radioserver.kxoj.helpers.AppSettings;
 import com.radioserver.kxoj.helpers.SharedAlgorithm;
+import com.radioserver.kxoj.services.RadioPlayerService;
 
 import org.san.iphonestyle.CustomScreen;
 
@@ -26,6 +30,17 @@ public class SocialScreen extends CustomScreen implements OnClickListener {
         super.onCreate(savedInstanceState);
 
         initData();
+
+        getActivity().registerReceiver(new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (AppSettings.shared().channelId == 1) {
+                    btnVine.setVisibility(View.GONE);
+                } else {
+                    btnVine.setVisibility(View.VISIBLE);
+                }
+            }
+        }, new IntentFilter(RadioPlayerService.ACTION_NEW_STREAM));
     }
 
     @Override
@@ -55,6 +70,17 @@ public class SocialScreen extends CustomScreen implements OnClickListener {
         btnEmail = (ImageView) container.findViewById(R.id.btnEmail);
         btnMessage = (ImageView) container.findViewById(R.id.btnMessage);
         btnVine = (ImageView) container.findViewById(R.id.btnVine);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (AppSettings.shared().channelId == 1) {
+            btnVine.setVisibility(View.GONE);
+        } else {
+            btnVine.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
