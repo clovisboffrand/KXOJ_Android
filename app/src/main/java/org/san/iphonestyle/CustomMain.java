@@ -45,6 +45,7 @@ public abstract class CustomMain extends TabActivity {
         tabIndicator = LayoutInflater.from(this).inflate(R.layout.layout_tabbar_indicator, getTabWidget(), false);
         ImageView tabIcon = (ImageView) tabIndicator.findViewById(R.id.icon);
         tabIcon.setImageResource(drawableId);
+        ((TextView) tabIndicator.findViewById(R.id.title)).setText(label);
 
         spec.setIndicator(tabIndicator);
 
